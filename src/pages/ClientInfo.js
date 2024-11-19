@@ -1,7 +1,5 @@
-// src/pages/ClientInfo.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 
 // Mock data for clients
 const mockClients = [
@@ -29,50 +27,53 @@ const ClientInfo = () => {
 
     setFilteredClients(filtered);
   };
+
   const navigate = useNavigate();
   const handleReturn = () => {
     navigate('/');
   };
 
-
   return (
-    <div>
+    <div className="client-info-page">
       <h1>Client Information</h1>
-      <input
-        type="text"
-        placeholder="Search by name, date, or coordinator"
-        value={search}
-        onChange={handleSearch}
-        style={{ marginBottom: '10px', padding: '5px' }}
-      />
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Creation Date</th>
-            <th>Coordinator</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredClients.length > 0 ? (
-            filteredClients.map((client) => (
-              <tr key={client.id}>
-                <td>{client.name}</td>
-                <td>{client.creationDate}</td>
-                <td>{client.coordinator}</td>
-              </tr>
-            ))
-          ) : (
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search by name, date, or coordinator"
+          value={search}
+          onChange={handleSearch}
+        />
+      </div>
+      <div className="table-container">
+        <table>
+          <thead>
             <tr>
-              <td colSpan={3}>No clients found</td>
+              <th>Name</th>
+              <th>Creation Date</th>
+              <th>Coordinator</th>
             </tr>
-          )}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {filteredClients.length > 0 ? (
+              filteredClients.map((client) => (
+                <tr key={client.id}>
+                  <td>{client.name}</td>
+                  <td>{client.creationDate}</td>
+                  <td>{client.coordinator}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan={3}>No clients found</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
       <div className="button-container">
-          <button type="submit">Next</button>
-          <button type='button' onClick={handleReturn}>Return to Home</button>
-        </div>
+        <button>Next</button>
+        <button onClick={handleReturn}>Return to Home</button>
+      </div>
     </div>
   );
 };

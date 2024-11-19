@@ -4,6 +4,13 @@ import { useNavigate } from 'react-router-dom';
 const Iniciales = ({ setClientData }) => {
   const navigate = useNavigate();
 
+  const handleNext = () => {
+    navigate('/reporte'); // Navigate to Reporte page
+  };
+  const handlePrevious = () => {
+    navigate('/home'); // Navigate to Home page
+  };
+
   // Local state for form data
   const [name, setName] = useState('');
   const [coordinator, setCoordinator] = useState('');
@@ -43,7 +50,7 @@ const Iniciales = ({ setClientData }) => {
     <div className="iniciales-page">
       <h1>Datos Iniciales</h1>
       <p>Escriba los datos iniciales del cliente</p>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="iniciales-form">
         <div className="form-row">
           <label htmlFor="name">Siniestro:</label>
           <input
@@ -122,9 +129,18 @@ const Iniciales = ({ setClientData }) => {
             required
           />
         </div>
-        <div className="button-container">
-          <button type="submit">Submit</button>
-          <button type="button" onClick={handleReturn}>Return to Home</button>
+
+        <div className="form-buttons">
+          <button type="button" className="prev-button" onClick={handlePrevious}>
+            Previous
+          </button>
+          <button type="submit" className="submit-button">Submit</button>
+          <button type="button" className="return-button" onClick={handleReturn}>
+            Return to Home
+          </button>
+          <button type="button" className="next-button" onClick={handleNext}>
+            Next
+          </button>
         </div>
       </form>
     </div>

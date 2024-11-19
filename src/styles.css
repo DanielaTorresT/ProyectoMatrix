@@ -1,8 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Lora', sans-serif;
   }
+  
+
   
   .home-page {
     
@@ -58,7 +60,7 @@ body {
   }
   
   button {
-    background-color: #96c2f2;
+    background-color: #529b9d;
     color: rgb(44, 43, 43);
     padding: 10px 20px;
     border: none;
@@ -68,7 +70,7 @@ body {
   }
   
   button:hover {
-    background-color: #83b9f1;
+    background-color: #529b9d;
   }
   
   /* General form section styles */
@@ -107,5 +109,703 @@ form {
     margin-top: 20px;
   }
   
+  /* In styles.css */
+
+/* Styling for links with icons */
+ul li a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: transform 0.2s, text-decoration 0.3s; /* Smooth transition */
+    font-weight: 600;
+  }
   
+  ul li a i {
+    margin-right: 8px;  /* Space between the icon and text */
+    font-size: 20px;  /* Icon size */
+  }
+  
+  /* Hover effect */
+  ul li a:hover {
+    transform: scale(1.05);  /* Slightly enlarge the link */
+    text-decoration: underline;  /* Underline on hover */
+    color: #007BFF;  /* Change color */
+  }
+  
+  /* In styles.css */
+
+/* Styling links as buttons */
+ul li a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #529b9d;  /* Blue background */
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  ul li a:hover {
+    background-color: #529b9d;  /* Darker blue on hover */
+    transform: scale(1.05);  /* Slightly enlarge */
+  }
+  
+  ul li a:active {
+    background-color: #529b9d;  /* Even darker blue when clicked */
+  }
+  
+  
+  /* In styles.css */
+
+/* Add spacing between list items */
+ul li {
+    margin-bottom: 15px;  /* Add space between each link */
+  }
+  
+  ul li a {
+    font-size: 18px;
+    color: #fbf6f6;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  ul li a:hover {
+    background-color: #529b9d;
+    color: white;
+  }
+  
+  /* In styles.css */
+
+/* Responsive styling for links */
+@media (max-width: 768px) {
+    ul li a {
+      font-size: 16px;
+      padding: 10px 12px;
+    }
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #6abcbf;
+    color: white;
+    font-size: large;
+  }
+  
+  .navbar-left {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navbar-left a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logout-button {
+    background-color: #6abcbf;
+    color: white;
+    border: none;
+    padding: 15px 20px; /* Reduce size */
+    font-size: large; /* Smaller text */
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 20px; /* Space from other elements */
+    transition: background-color 0.3s ease;
+    justify-content: space-between;
+  }
+  
+  .logout-button:hover {
+    background-color: #a3a0a0;
+  }
+  
+  /* Add this to your CSS file (e.g., styles.css) */
+
+.home-page-container {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height: 100vh;            /* Full viewport height */
+    text-align: center;       /* Center text */
+    padding: 20px;            /* Optional padding */
+    color: #1a4345;
+  }
+  
+  .home-page-content {
+    max-width: 600px;         /* Optional max width for better readability */
+    width: 100%;              /* Take up full width within the max width */
+  }
+  
+  ul {
+    list-style-type: none;    /* Remove default list styling */
+    padding: 0;               /* Remove padding */
+  }
+  
+  ul li {
+    margin: 10px 0;           /* Space between links */
+  }
+  
+  a {
+    text-decoration: none;    /* Remove underline from links */
+    color: #529b9d;           /* Link color */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General page styles */
+.iniciales-page {
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px; /* Adjust if your NavBar is fixed */
+  }
+  
+  .iniciales-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-row {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-row label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .form-row input,
+  .form-row select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+  }
+  
+  .form-row input:focus,
+  .form-row select:focus {
+    border-color: #529b9d;
+    outline: none;
+  }
+  
+  /* Button container */
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #75a4a5;
+  }
+  
+  .prev-button {
+    background-color: #529b9d;
+    color: #333;
+  }
+  
+  .submit-button {
+    background-color: #6de289;
+    color: rgb(21, 20, 20);
+  }
+  
+  .return-button {
+    background-color: #ee7985;
+    color: rgb(11, 11, 11);
+  }
+  
+  .next-button {
+    background-color: #529b9d;
+    color: black;
+  }
+  
+  /* Adjust button spacing */
+  .form-buttons button {
+    width: 48%;
+    margin: 0 10px;
+  }
+
+  /* General page styles */
+.reporte-page {
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px; /* Adjust if your NavBar is fixed */
+  }
+  
+  .reporte-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-row {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-row label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .form-row input,
+  .form-row select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+  }
+  
+  .form-row input:focus,
+  .form-row select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Button container */
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* General page styles */
+.contacto-page {
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px; /* Adjust if your NavBar is fixed */
+  }
+  
+  .contacto-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #07383a;
+    font-size: 35px;
+    margin-top: 30px;
+  }
+  h2 {
+    color: #529b9d;
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  p {
+    color: #124243;
+    font-size: 18px;
+    
+  }
+  
+  .form-row {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-row label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .form-row input,
+  .form-row select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+  }
+  
+  .form-row input:focus,
+  .form-row select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Button container */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+ 
+  
+  /* Adjust button spacing */
+  .button-container button {
+    width: 48%;
+    margin: 0 10px;
+  }
+  
+  
+  /* General styles for the Fallecido page */
+.fallecido-page {
+  
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fallecido-page h1 {
+    color: #07383a;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .fallecido-page p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .form-row input,
+  .form-row select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-row input:focus,
+  .form-row select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Button styles */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .button-container button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .button-container button[type="submit"] {
+    background-color: #6de289;
+    color: black;
+  }
+  
+  .button-container button[type="submit"]:hover {
+    background-color: #6de289;
+  }
+  
+  .button-container button[type="button"] {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  .button-container button[type="button"]:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .fallecido-page {
+      padding: 15px;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  /* General styles for the Client Info page */
+.client-info-page {
+   
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .client-info-page h1 {
+    text-align: center;
+    color: #07383a;
+    margin-bottom: 20px;
+  }
+  
+  /* Search bar */
+  .search-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-container input {
+    width: 80%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-container input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Table styles */
+  .table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th,
+  table td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #529b9d;
+    color: white;
+    font-weight: bold;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table tr:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+  }
+  
+  /* Button styles */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .button-container button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .button-container button {
+    background-color: #529b9d;
+    color: white;
+  }
+  
+  .button-container button:hover {
+    background-color: #529b9d;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .client-info-page {
+      padding: 15px;
+    }
+  
+    .search-container input {
+      width: 100%;
+    }
+  
+    .button-container {
+      flex-direction: column;
+    }
+  }
+  
+  /* Center the SignIn form */
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+   
+  }
+  
+  /* Card styling for the form */
+  .signin-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .signin-card h2 {
+    margin-bottom: 20px;
+    color: #07383a;
+  }
+  
+  /* Form styles */
+  .form-row {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .form-row label {
+    display: block;
+    font-size: 14px;
+    color: #07383a;
+    margin-bottom: 5px;
+  }
+  
+  .form-row input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-row input:focus {
+    border-color: #529b9d;
+    outline: none;
+  }
+  
+  /* Error message */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* Button styling */
+  .signin-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #529b9d;
+    color: black;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signin-button:hover {
+    background-color: #82cdcf;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .signin-card {
+      padding: 15px;
+    }
+  
+    .signin-button {
+      font-size: 14px;
+    }
+  }
   
